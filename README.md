@@ -2,13 +2,12 @@
 
 A modern, React-based quiz application that generates personalized quizzes using OpenAI and CrewAI technology. Features a beautiful purple and white themed interface designed for an optimal learning experience.
 
-![Quiz Portal](https://img.shields.io/badge/React-18.2.0-blue) ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5-green) ![CrewAI](https://img.shields.io/badge/CrewAI-Enabled-purple) ![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black) ![Railway](https://img.shields.io/badge/Also%20on-Railway-blueviolet)
+![Quiz Portal](https://img.shields.io/badge/React-18.2.0-blue) ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5-green) ![CrewAI](https://img.shields.io/badge/CrewAI-Enabled-purple) ![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black)
 
 ## 🌐 Live Demo
 **[🚀 Try the Quiz Portal Live](https://quiz-submission-portal.vercel.app/)** 
 
-> **Primary Deployment**: Vercel (Recommended)  
-> **Alternative**: [Railway Deployment](https://quiz-submission-portal-production.up.railway.app) (if available)
+> **Live on Vercel** - Fast, reliable, and globally distributed
 
 ## 📸 Screenshots
 
@@ -281,7 +280,7 @@ npm run eject
 
 ## 🚀 Deployment
 
-### Vercel (Recommended - Currently Live)
+### Vercel (Currently Live)
 
 #### Option 1: Deploy from GitHub (Easiest)
 1. Go to [vercel.com](https://vercel.com) and sign in
@@ -310,32 +309,6 @@ vercel --prod
 - **Build fails**: Check build logs in Vercel dashboard
 - **Environment variables**: Make sure to add your OpenAI API key in Vercel dashboard
 - **Auto-deploy**: Every GitHub push triggers automatic deployment
-
-### Railway (Alternative)
-
-#### Option 1: Deploy from GitHub
-1. Go to [railway.app](https://railway.app) and sign in
-2. Click "New Project" → "Deploy from GitHub repo"
-3. Select `zainab318/quiz-submission-portal-`
-4. Railway will auto-detect it as a React app
-5. Add environment variable: `REACT_APP_OPENAI_API_KEY`
-6. Deploy automatically!
-
-#### Option 2: Using Railway CLI
-```bash
-# Install Railway CLI
-npm install -g @railway/cli
-
-# Login to Railway
-railway login
-
-# Deploy from GitHub repository
-railway link
-railway up
-```
-
-#### Environment Variables Required:
-- `REACT_APP_OPENAI_API_KEY` = Your OpenAI API key
 
 ### Netlify
 
