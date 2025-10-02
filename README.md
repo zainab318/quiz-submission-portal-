@@ -2,7 +2,10 @@
 
 A modern, React-based quiz application that generates personalized quizzes using OpenAI and CrewAI technology. Features a beautiful purple and white themed interface designed for an optimal learning experience.
 
-![Quiz Portal](https://img.shields.io/badge/React-18.2.0-blue) ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5-green) ![CrewAI](https://img.shields.io/badge/CrewAI-Enabled-purple)
+![Quiz Portal](https://img.shields.io/badge/React-18.2.0-blue) ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5-green) ![CrewAI](https://img.shields.io/badge/CrewAI-Enabled-purple) ![Railway](https://img.shields.io/badge/Deployed%20on-Railway-blueviolet)
+
+## 🌐 Live Demo
+**[🚀 Try the Quiz Portal Live](https://quiz-submission-portal-production.up.railway.app)** *(Link will be active after Railway deployment)*
 
 ## 🎥 Demo Video
 
@@ -286,7 +289,30 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+### Railway (Recommended)
+
+1. **Connect to Railway**
+   ```bash
+   # Install Railway CLI
+   npm install -g @railway/cli
+   
+   # Login to Railway
+   railway login
+   
+   # Deploy from GitHub repository
+   railway link
+   railway up
+   ```
+
+2. **Environment Variables**
+   - Add your `REACT_APP_OPENAI_API_KEY` in Railway dashboard
+   - Configure any other environment variables as needed
+
+3. **Automatic Deployments**
+   - Railway automatically deploys on every push to main branch
+   - Custom domain support available
+
+### Vercel
 
 1. Push your code to GitHub
 2. Connect your repository to Vercel
@@ -300,11 +326,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 3. Configure environment variables
 4. Set up continuous deployment
 
-### Traditional Hosting
+### Docker Deployment
 
-1. Run `npm run build`
-2. Upload the contents of the `build` folder to your web server
-3. Configure your server to serve the `index.html` for all routes
+1. Build the Docker image:
+   ```bash
+   docker build -t quiz-portal .
+   ```
+
+2. Run the container:
+   ```bash
+   docker run -p 3000:3000 -e REACT_APP_OPENAI_API_KEY=your_key quiz-portal
+   ```
 
 ## 📊 Performance
 
