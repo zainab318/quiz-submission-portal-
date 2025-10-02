@@ -5,7 +5,9 @@ A modern, React-based quiz application that generates personalized quizzes using
 ![Quiz Portal](https://img.shields.io/badge/React-18.2.0-blue) ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5-green) ![CrewAI](https://img.shields.io/badge/CrewAI-Enabled-purple) ![Railway](https://img.shields.io/badge/Deployed%20on-Railway-blueviolet)
 
 ## 🌐 Live Demo
-**[🚀 Try the Quiz Portal Live](https://quiz-submission-portal-production.up.railway.app)** *(Link will be active after Railway deployment)*
+**[🚀 Try the Quiz Portal Live](https://quiz-submission-portal-production.up.railway.app)** 
+
+> **Note**: If the above link doesn't work, your Railway deployment URL might be different. Check your Railway dashboard for the exact URL.
 
 ## 📸 Screenshots
 
@@ -280,26 +282,35 @@ npm run eject
 
 ### Railway (Recommended)
 
-1. **Connect to Railway**
-   ```bash
-   # Install Railway CLI
-   npm install -g @railway/cli
-   
-   # Login to Railway
-   railway login
-   
-   # Deploy from GitHub repository
-   railway link
-   railway up
-   ```
+#### Option 1: Deploy from GitHub (Easiest)
+1. Go to [railway.app](https://railway.app) and sign in
+2. Click "New Project" → "Deploy from GitHub repo"
+3. Select `zainab318/quiz-submission-portal-`
+4. Railway will auto-detect it as a React app
+5. Add environment variable: `REACT_APP_OPENAI_API_KEY`
+6. Deploy automatically!
 
-2. **Environment Variables**
-   - Add your `REACT_APP_OPENAI_API_KEY` in Railway dashboard
-   - Configure any other environment variables as needed
+#### Option 2: Using Railway CLI
+```bash
+# Install Railway CLI
+npm install -g @railway/cli
 
-3. **Automatic Deployments**
-   - Railway automatically deploys on every push to main branch
-   - Custom domain support available
+# Login to Railway
+railway login
+
+# Deploy from GitHub repository
+railway link
+railway up
+```
+
+#### Environment Variables Required:
+- `REACT_APP_OPENAI_API_KEY` = Your OpenAI API key
+
+#### Troubleshooting Railway Deployment:
+- **Build fails**: Check that `serve` is in dependencies (already added)
+- **App doesn't start**: Railway should use the `nixpacks.toml` configuration
+- **Port issues**: Railway automatically sets `$PORT` environment variable
+- **Environment variables**: Make sure to add your OpenAI API key in Railway dashboard
 
 ### Vercel
 
