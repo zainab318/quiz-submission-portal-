@@ -2,7 +2,7 @@
 cmds = ["npm install --legacy-peer-deps", "npm run build"]
 
 [phases.start]
-cmd = "npx serve -s build -l $PORT"
+cmd = "node start.js"
 
 [variables]
 NODE_ENV = "production"
